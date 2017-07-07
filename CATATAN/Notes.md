@@ -66,3 +66,19 @@ x /= y = not (x == y)
 ```
 Note that we can write operators infix even when defining them.
 Completely new operators can also be created out of ASCII symbols.
+
+## `where` and guards
+
+`where` clauses are often used with guards.
+
+```haskell
+numOfRealSolutions a b c
+    | discr > 0 = 2
+    | discr == 0 = 1
+    | otherwise = 0
+        where
+        discr = b^2 - 4*a*c
+```
+
+The `where` definition is within the scope of all the guards, sparing us from
+repeating the expression for `discr`

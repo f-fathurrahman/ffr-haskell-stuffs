@@ -82,3 +82,22 @@ numOfRealSolutions a b c
 
 The `where` definition is within the scope of all the guards, sparing us from
 repeating the expression for `discr`
+
+## Type
+
+```haskell
+*Main> :type True
+True :: Bool
+*Main> :type False
+False :: Bool
+*Main> :type 1.2
+1.2 :: Fractional a => a
+*Main> :type 1
+1 :: Num a => a
+*Main> :type 32/2
+32/2 :: Fractional a => a
+*Main> :type 32/2.1
+32/2.1 :: Fractional a => a
+*Main> :type "Hello"
+"Hello" :: [Char]
+```
